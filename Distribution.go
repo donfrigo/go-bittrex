@@ -1,13 +1,11 @@
 package bittrex
 
-import "github.com/shopspring/decimal"
-
 type Distribution struct {
-	Distribution   []BalanceD      `json:"Distribution"`
-	Balances       decimal.Decimal `json:"Balances"`
-	AverageBalance decimal.Decimal `json:"AverageBalance"`
+	Distribution   []BalanceD `json:"Distribution"`
+	Balances       float64    `json:"Balances"`
+	AverageBalance float64    `json:"AverageBalance"`
 }
 
 type BalanceD struct {
-	BalanceD decimal.Decimal `json:"Balance"`
+	BalanceD float64 `json:"Balance"`
 }

@@ -1,18 +1,16 @@
 package bittrex
 
-import "github.com/shopspring/decimal"
-
 type Order struct {
-	OrderUuid         string          `json:"OrderUuid"`
-	Exchange          string          `json:"Exchange"`
-	TimeStamp         jTime           `json:"TimeStamp"`
-	OrderType         string          `json:"OrderType"`
-	Limit             decimal.Decimal `json:"Limit"`
-	Quantity          decimal.Decimal `json:"Quantity"`
-	QuantityRemaining decimal.Decimal `json:"QuantityRemaining"`
-	Commission        decimal.Decimal `json:"Commission"`
-	Price             decimal.Decimal `json:"Price"`
-	PricePerUnit      decimal.Decimal `json:"PricePerUnit"`
+	OrderUuid         string  `json:"OrderUuid"`
+	Exchange          string  `json:"Exchange"`
+	TimeStamp         jTime   `json:"TimeStamp"`
+	OrderType         string  `json:"OrderType"`
+	Limit             float64 `json:"Limit"`
+	Quantity          float64 `json:"Quantity"`
+	QuantityRemaining float64 `json:"QuantityRemaining"`
+	Commission        float64 `json:"Commission"`
+	Price             float64 `json:"Price"`
+	PricePerUnit      float64 `json:"PricePerUnit"`
 }
 
 // For getorder
@@ -21,16 +19,16 @@ type Order2 struct {
 	OrderUuid                  string `json:"OrderUuid"`
 	Exchange                   string `json:"Exchange"`
 	Type                       string
-	Quantity                   decimal.Decimal `json:"Quantity"`
-	QuantityRemaining          decimal.Decimal `json:"QuantityRemaining"`
-	Limit                      decimal.Decimal `json:"Limit"`
-	Reserved                   decimal.Decimal
-	ReserveRemaining           decimal.Decimal
-	CommissionReserved         decimal.Decimal
-	CommissionReserveRemaining decimal.Decimal
-	CommissionPaid             decimal.Decimal
-	Price                      decimal.Decimal `json:"Price"`
-	PricePerUnit               decimal.Decimal `json:"PricePerUnit"`
+	Quantity                   float64 `json:"Quantity"`
+	QuantityRemaining          float64 `json:"QuantityRemaining"`
+	Limit                      float64 `json:"Limit"`
+	Reserved                   float64
+	ReserveRemaining           float64
+	CommissionReserved         float64
+	CommissionReserveRemaining float64
+	CommissionPaid             float64
+	Price                      float64 `json:"Price"`
+	PricePerUnit               float64 `json:"PricePerUnit"`
 	Opened                     string
 	Closed                     string
 	IsOpen                     bool
@@ -39,5 +37,5 @@ type Order2 struct {
 	ImmediateOrCancel          bool
 	IsConditional              bool
 	Condition                  string
-	ConditionTarget            decimal.Decimal
+	ConditionTarget            string
 }
